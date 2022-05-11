@@ -19,6 +19,7 @@ const SignUpForm = () => {
 
   const { displayName, email, password, confirmPassword } = formFields;
 
+
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -37,7 +38,10 @@ const SignUpForm = () => {
           email,
           password
         );
+
+
         await createUserDocumentFromAuth(user, { displayName });
+        
         resetFormFields();
       } catch (error) {
         if (error.code === "auth/email-already-in-use") {

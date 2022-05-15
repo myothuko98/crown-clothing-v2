@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import DirectoryItem from "../directory-item/directory-item.component";
 import { DirectoryContainer } from "./directory.styles.jsx";
 
@@ -36,14 +35,13 @@ const categories = [
 ];
 
 const Directory = () => {
-  const navigate = useNavigate();
   return (
     <DirectoryContainer>
       {categories.map((category) => (
         <DirectoryItem category={category} key={category.id}  />
       ))}
     </DirectoryContainer>
-  );
+  );  
 };
 
 export default Directory;

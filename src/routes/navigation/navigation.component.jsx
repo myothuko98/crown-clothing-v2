@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
@@ -14,8 +15,11 @@ import {
 } from "./navigation.styles";
 
 const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
+  // const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
+
+  const currentUser = useSelector((state) => state.user.currentUser);
+
   return (
     <>
       <NavigationContainer>

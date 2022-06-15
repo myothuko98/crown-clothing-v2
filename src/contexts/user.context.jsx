@@ -1,5 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 import { createAction } from "../reducer/reducer.utils";
+import { USER_ACTION_TYPES } from "../store/user/user.types";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangeListener,
@@ -9,10 +10,6 @@ export const UserContext = createContext({
   setCurrentUser: () => null,
   currentUser: null,
 });
-
-export const USER_ACTION_TYPES = {
-  SET_CURRENT_USER: "SET_CURRENT_USER",
-};
 
 const INITIAL_STATE = {
   currentUser: null,

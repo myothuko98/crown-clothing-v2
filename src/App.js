@@ -22,8 +22,8 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
 
-    return unsubscribe;
-  }, []);
+    return unsubscribe;// eslint-disable-next-line
+  }, []); 
 
   return (
     <Routes>

@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import "./checkout-item.styles.jsx";
 import {
   Arrow,
@@ -24,14 +23,14 @@ const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
 
   const clearItemHandler = () => {
-    dispatch(clearItemFromCart(cartItem));
+    dispatch(clearItemFromCart(cartItems, cartItem));
   };
 
   const removeItemFromCartHandler = () => {
-    dispatch(removeItemFromCart(cartItem));
+    dispatch(removeItemFromCart(cartItems, cartItem));
   };
   const addItemToCartHandler = () => {
-    dispatch(addItemToCart(cartItem));
+    dispatch(addItemToCart(cartItems, cartItem));
   };
 
   return (

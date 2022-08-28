@@ -8,9 +8,7 @@ import {
 const CategoryPreview = ({ title, products }) => {
   return (
     <CategoryPreviewContainer>
-      <h2>
         <CategoryTitle to={title}>{title.toUpperCase()}</CategoryTitle>
-      </h2>
 
       <CategoryItemPreview>
         {products
